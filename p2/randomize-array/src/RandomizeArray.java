@@ -2,16 +2,15 @@
  * RandomizeArray
  *
  * @author AlexandrAnatoliev
- * @version 0.1.2 2025-07-17
+ * @version 0.1.3 2025-07-17
  */
 public class RandomizeArray {
   public static void main(String[] args) {
 
-    String[] array = new String[args.length];
+    int[] array = new int[args.length];
     if (args.length > 0) {
-      System.out.println("yes");
       for(int i = 0; i < args.length; i++) {
-        array[i] = args[i];
+        array[i] = Integer.parseInt(args[i]);
       }
     }
     for (int i = 0; i < array.length; i++) {
