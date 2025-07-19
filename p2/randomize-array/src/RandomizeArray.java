@@ -2,7 +2,7 @@
  * RandomizeArray
  *
  * @author AlexandrAnatoliev
- * @version 0.2.1 2025-07-19
+ * @version 0.2.2 2025-07-19
  */
 public class RandomizeArray {
   public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class RandomizeArray {
     }
 
     for (int i = 0; i < array.length - 1; i++) {
-      int randomIndex = getNextNumber(i, i + 1, args.length);
+      int randomIndex = getNextNumber(i, i, args.length);
       int temp = array[randomIndex];
       array[randomIndex] = array[i];
       array[i] = temp;
@@ -35,7 +35,6 @@ public class RandomizeArray {
    * @return Random number
    */
   public static int getNextNumber(int number, int min, int max) { 
-    return min + (7 * number + 5) % max - min;
+    return (int)(min + (double)((7 * number + 5) % max) / (max) * (max - min));
   }
-
 }
