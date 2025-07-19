@@ -2,7 +2,7 @@
  * RandomizeArray
  *
  * @author AlexandrAnatoliev
- * @version 0.2.0 2025-07-19
+ * @version 0.2.1 2025-07-19
  */
 public class RandomizeArray {
   public static void main(String[] args) {

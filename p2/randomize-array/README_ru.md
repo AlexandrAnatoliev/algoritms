@@ -5,7 +5,8 @@
 `javac -d bin src/RandomizeArray.java`
 
 Запуск скомпилированного кода:
-`java -cp bin/ RandomizeArray`
+`java -cp bin/ RandomizeArray 1 2 3 4 5`
 
+Выведет, например: 3 2 5 1 4
 
 
