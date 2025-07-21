@@ -2,7 +2,7 @@
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.1.0 2025-07-21
+ * @version 0.1.1 2025-07-21
  */
 public class Pow {
   public static void main(String[] args) {
@@ -29,6 +29,7 @@ public class Pow {
     int even = 2;
     for(int i = 1; even <= power; even *= 2) {
       array[i] = array[i - 1] * array[i - 1];
+      i++;
     } 
     return array;
   }
