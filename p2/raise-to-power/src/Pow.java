@@ -13,6 +13,7 @@ public class Pow {
     for(int i = 0; i < pow; i++) {
       System.out.print(" " + array[i]);
     }
+    System.out.print("\n");
   }
 
   /**
@@ -26,7 +27,7 @@ public class Pow {
     long[] array = new long[64];
     array[0] = number;
     int even = 2;
-    for(int i = 1; even < power; even *= 2) {
+    for(int i = 1; even <= power; even *= 2) {
       array[i] = array[i - 1] * array[i - 1];
     } 
     return array;
