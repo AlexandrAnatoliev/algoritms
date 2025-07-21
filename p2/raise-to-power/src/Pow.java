@@ -2,7 +2,7 @@
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.1.1 2025-07-21
+ * @version 0.2.0 2025-07-21
  */
 public class Pow {
   public static void main(String[] args) {
@@ -14,6 +14,29 @@ public class Pow {
       System.out.print(" " + array[i]);
     }
     System.out.print("\n");
+    long answer = getPow(num, pow, array);
+  }
+
+  /**
+   * Method to get pow of number
+   *
+   * @param number Natural number A
+   * @param power Natural number B
+   * @return A^B
+   */
+  public static long getPow(long number, long power, long[] array) { 
+    long answer = 1;
+    long mask = 1;
+    while(mask <= power) {
+      if((power & mask) / mask == 1) {
+        System.out.print(1);
+      }
+      else {
+        System.out.print(0);
+      }
+      mask *= 2;
+    }
+    return answer;
   }
 
   /**
