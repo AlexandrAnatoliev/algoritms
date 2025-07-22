@@ -2,7 +2,7 @@
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.2.0 2025-07-21
+ * @version 0.3.0 2025-07-21
  */
 public class Pow {
   public static void main(String[] args) {
@@ -10,11 +10,8 @@ public class Pow {
     long pow = Long.parseLong(args[1]);
 
     long[] array = getEvenPowArray(num, pow);
-    for(int i = 0; i < pow; i++) {
-      System.out.print(" " + array[i]);
-    }
-    System.out.print("\n");
     long answer = getPow(num, pow, array);
+    System.out.println(num+"^"+pow+"="+answer);
   }
 
   /**
@@ -27,14 +24,13 @@ public class Pow {
   public static long getPow(long number, long power, long[] array) { 
     long answer = 1;
     long mask = 1;
+    int indx = 0;
     while(mask <= power) {
       if((power & mask) / mask == 1) {
-        System.out.print(1);
-      }
-      else {
-        System.out.print(0);
+	answer *= array[indx];
       }
       mask *= 2;
+      indx++;
     }
     return answer;
   }
