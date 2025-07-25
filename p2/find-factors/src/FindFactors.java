@@ -2,13 +2,28 @@
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.2.0 2025-07-25
+ * @version 0.2.1 2025-07-25
  */
+import java.util.ArrayList;
+
 public class FindFactors {
   public static void main(String[] args) {
     int num = Integer.parseInt(args[0]);
 
-    System.out.print(num + " = " + getNextFactor(2, num));
+    System.out.print("\n" + num + " = ");
+
+    ArrayList<Integer> factors = new ArrayList<Integer>();
+    int fact = 2;
+    while(fact <= num) {
+      fact = getNextFactor(fact, num);
+      factors.add(fact);
+      num /= fact;
+    }
+    System.out.print(factors.get(0));
+    for(int i = 1; i < factors.size(); i++) {
+      System.out.print(" * " + factors.get(i));
+    }
+    System.out.print("\n");
   }
 
   /**
