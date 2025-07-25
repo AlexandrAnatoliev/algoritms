@@ -1,11 +1,12 @@
+import static java.lang.Math.*;
+import java.util.ArrayList;
+
 /**
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.2.2 2025-07-25
+ * @version 0.2.3 2025-07-25
  */
-import java.util.ArrayList;
-
 public class FindFactors {
   public static void main(String[] args) {
     int num = Integer.parseInt(args[0]);
@@ -42,7 +43,9 @@ public class FindFactors {
       start++;
     }
 
-    for(int factor = start; factor < number; factor += 2) {
+    int max = (int)sqrt(number);
+
+    for(int factor = start; factor < max; factor += 2) {
       if(number % factor == 0) {
         return factor;
       }
