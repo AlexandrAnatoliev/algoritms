@@ -2,34 +2,29 @@
  * Raise to power
  *
  * @author AlexandrAnatoliev
- * @version 0.1.1 2025-07-25
+ * @version 0.2.0 2025-07-25
  */
 public class FindFactors {
   public static void main(String[] args) {
     int num = Integer.parseInt(args[0]);
 
-    System.out.print(num + " = ");
+    System.out.print(num + " = " + getNextFactor(2, num));
   }
 
   /**
-   * Method to get pow of number
+   * Method to get next minimal factor of number
    *
-   * @param number Natural number A
-   * @param power Natural number B
-   * @return A^B
+   * @param start First number to search
+   * @param number Natural number
+   * @return factor
    */
-  public static long getPow(long number, long power, long[] array) { 
-    long answer = 1;
-    long mask = 1;
-    int indx = 0;
-    while(mask <= power) {
-      if((power & mask) / mask == 1) {
-	answer *= array[indx];
+  public static int getNextFactor(int start, int number) { 
+    for(int factor = start; factor < number; factor++) {
+      if(number % factor == 0) {
+        return factor;
       }
-      mask *= 2;
-      indx++;
     }
-    return answer;
+    return number;
   }
 
   /**
