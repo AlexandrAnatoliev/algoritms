@@ -2,10 +2,10 @@ import static java.lang.Math.*;
 import java.util.ArrayList;
 
 /**
- * Raise to power
+ * Find Factors
  *
  * @author AlexandrAnatoliev
- * @version 0.2.3 2025-07-25
+ * @version 0.2.4 2025-07-25
  */
 public class FindFactors {
   public static void main(String[] args) {
@@ -15,13 +15,13 @@ public class FindFactors {
 
     ArrayList<Integer> factors = new ArrayList<Integer>();
     int fact = 2;
-    while(fact <= num) {
+    while (fact <= num) {
       fact = getNextFactor(fact, num);
       factors.add(fact);
       num /= fact;
     }
     System.out.print(factors.get(0));
-    for(int i = 1; i < factors.size(); i++) {
+    for (int i = 1; i < factors.size(); i++) {
       System.out.print(" * " + factors.get(i));
     }
     System.out.print("\n");
@@ -30,23 +30,23 @@ public class FindFactors {
   /**
    * Method to get next minimal factor of number
    *
-   * @param start First number to search
+   * @param start  First number to search
    * @param number Natural number
    * @return factor
    */
-  public static int getNextFactor(int start, int number) { 
-    if(number % 2 == 0) {
+  public static int getNextFactor(int start, int number) {
+    if (number % 2 == 0) {
       return 2;
     }
 
-    if(start % 2 == 0) {
+    if (start % 2 == 0) {
       start++;
     }
 
-    int max = (int)sqrt(number);
+    int max = (int) sqrt(number);
 
-    for(int factor = start; factor < max; factor += 2) {
-      if(number % factor == 0) {
+    for (int factor = start; factor < max; factor += 2) {
+      if (number % factor == 0) {
         return factor;
       }
     }
