@@ -15,7 +15,7 @@ public class Pow {
   }
 
   /**
-   * Method to get pow of number
+   * Method to get pow of number 
    *
    * @param number Natural number A
    * @param power Natural number B

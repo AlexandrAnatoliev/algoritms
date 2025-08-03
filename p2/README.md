@@ -7,6 +7,7 @@
 * [Генерирование случайных величин](randomizer.el)
 * [Рандомизация массива](randomize-array.el)
 * [Нахождение наибольшего общего делителя](great-common-divisor.el)
+* [Возведение в степень](raise-to-power.el)
 
 #### Java
 
