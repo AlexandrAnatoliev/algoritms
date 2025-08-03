@@ -5,6 +5,7 @@
 #### Elisp
 
 * [Генерирование случайных величин](randomizer.el)
+* [Рандомизация массива](randomize-array.el)
 
 #### Java
 
