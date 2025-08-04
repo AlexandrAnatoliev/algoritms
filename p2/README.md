@@ -8,6 +8,7 @@
 * [Рандомизация массива](randomize-array.el)
 * [Нахождение наибольшего общего делителя](great-common-divisor.el)
 * [Возведение в степень](raise-to-power.el)
+* [Нахождение простых множителей](find-factors.el)
 
 #### Java
 
